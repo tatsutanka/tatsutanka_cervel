@@ -20,7 +20,7 @@
         <legend>
           <strong>Crédito Direto ao Consumidor</strong>
         </legend>
-            <form action="" id="tableSubmit">
+            <form action="api/index.php" method="post" id="tableSubmit">
                 <div class="box">
                     <span class="input-group-blank">0</span>
                     <label for="parc">Parcelamento:</label>
@@ -113,13 +113,17 @@
                     <input
                         id="submitButton"
                         class="button"
-                        type="subtime"
+                        type="submit"
                         value="Calcular"
                     />
+                    <div class="icone">
+                      <a href="https://github.com/tatsutanka/tatsutanka_vercel" >
+                        <img src="github.png" width="32"/>
+                      </a>
+                    </div>
                     <p>(arraste-me para reposicionar a janela)</p>
                 </div>
             </form>
-
             <div id="errorMessage" class="messages"></div>
             <div id="successMessage" class="messages">
                 <p>
@@ -128,61 +132,7 @@
                 </p>
             </div>
         </fieldset>
-        <script src="outros.js"></script>
-        <!-- results -->
-        <div id="order-tables">
 
-          <fieldset id="pricefieldset" class="draggable ui-widget-content box">
-            <legend>Tabela Price</legend>
-              <form id="price-table-form">
-                <table id="price-table"></table>
-              </form>
-              <div  id="box-price" >
-                <legend><strong>Total</strong></legend>
-                <table id="price-table-total">
-                  <tr>
-                    <th class="total-th">Prestação</th>
-                    <th class="total-th">Juros</th>
-                    <th class="total-th">Amortização</th>
-                    <th class="total-th">Saldo</th>
-                  </tr>
-                  <tr >
-                    <td class="total-td" id="total-prestacao">0</td>
-                    <td class="total-td" id="total-juros">0</td>
-                    <td class="total-td" id="total-amortizacao">0</td>
-                    <td class="total-td" id="total-saldo">0</td>
-                  </tr>
-                </table>
-              </div>
-          </fieldset>
-          <!-- Metodo de Newton -->
-          <fieldset id="newtonfildset" class="draggable ui-widget-content box">
-            <legend><strong>Outros</strong></legend>
-            <div class="box">
-
-              <p><strong>Coeficiente de Financimento:</strong><p id="newton-cf">value</p></p>
-              <br/>
-
-              <p><strong>Prestação:</strong><p id="newton-prestacao">value</p></p>
-              <br/>
-
-              <p><strong>Valor Pago:</strong><p id="newton-valorPago">value</p></p>
-              <br/>
-
-              <p><strong>Taxa Real:</strong><p id="newton-taxaReal">value</p></p>
-              <br/>
-
-              <p><strong>Valor Corrigido:</strong><p id="newton-valorCorrigido">value</p></p>
-              <br/>
-            </div>
-
-          </fieldset>
-          <fieldset id="consumidorfieldset">
-            <legend><strong>Crédito Direto ao Consumidor</strong></legend>
-            <div class="box">
-
-            </div>
-          </fieldset>
         </div>
     </body>
 </html>
